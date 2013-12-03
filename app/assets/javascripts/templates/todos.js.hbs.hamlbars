@@ -23,8 +23,9 @@
         = hb 'link-to "todos.completed" activeClass="selected"' do
           Completed
 
-    %button#clear-completed
-      Clear completed (1)
+    = hb 'if hasCompleted' do
+      %button#clear-completed{_action: 'clearCompleted'}
+        Clear completed (#{hb 'completed'})
 
 %footer#info
   %p Double-click to edit a todo
