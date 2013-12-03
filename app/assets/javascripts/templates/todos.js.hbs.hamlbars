@@ -6,10 +6,15 @@
   %section#main
     %ul#todo-list
       = hb 'each itemController="todo"' do
-        %li{bind: {class: 'isCompleted:completed'}}
-          = hb 'input type="checkbox" checked=isCompleted class="toggle"'
-          %label= hb 'title'
-          %button.destroy
+        %li{bind: {class: 'isCompleted:completed isEditing:editing'}}
+          = hb 'if isEditing' do
+            %input.edit
+
+            = hb 'else'
+
+            = hb 'input type="checkbox" checked=isCompleted class="toggle"'
+            %label{_action: '"editTodo" on="doubleClick"'}= hb 'title'
+            %button.destroy
 
     %input#toggle-all(type='checkbox')
 
