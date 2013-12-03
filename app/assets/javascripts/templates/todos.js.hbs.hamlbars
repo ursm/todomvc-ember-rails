@@ -5,18 +5,11 @@
 
   %section#main
     %ul#todo-list
-      %li.completed
-        %input.toggle(type='checkbox')
-        %label Learn Ember.js
-        %button.destroy
-      %li
-        %input.toggle(type='checkbox')
-        %label ...
-        %button.destroy
-      %li
-        %input.toggle(type='checkbox')
-        %label Profit!
-        %button.destroy
+      = hb 'each' do
+        %li
+          %input.toggle(type='checkbox')
+          %label= hb 'title'
+          %button.destroy
 
     %input#toggle-all(type='checkbox')
 
