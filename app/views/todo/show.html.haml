@@ -7,44 +7,4 @@
     = stylesheet_link_tag 'application'
 
   %body
-    %section#todoapp
-      %header#header
-        %h1 todos
-        %input#new-todo(type='text' placeholder='What needs to be done?')
-
-      %section#main
-        %ul#todo-list
-          %li.completed
-            %input.toggle(type='checkbox')
-            %label Learn Ember.js
-            %button.destroy
-          %li
-            %input.toggle(type='checkbox')
-            %label ...
-            %button.destroy
-          %li
-            %input.toggle(type='checkbox')
-            %label Profit!
-            %button.destroy
-
-        %input#toggle-all(type='checkbox')
-
-      %footer#footer
-        %span#todo-count
-          <strong>2</strong> todos left
-
-        %ul#filters
-          %li
-            %a.selected(href='all') All
-          %li
-            %a(href='active') Active
-          %li
-            %a(href='completed') Completed
-
-        %button#clear-completed
-          Clear completed (1)
-
-    %footer#info
-      %p Double-click to edit a todo
-
     = javascript_include_tag 'application'
