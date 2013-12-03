@@ -11,4 +11,9 @@
 
 window.Todos = Ember.Application.create()
 
-Todos.ApplicationAdapter = DS.FixtureAdapter.extend()
+Todos.ApplicationAdapter = DS.ActiveModelAdapter.extend
+  namespace: 'api'
+
+Todos.TodoSerializer = DS.ActiveModelSerializer.extend
+  attrs:
+    isCompleted: 'completed'
