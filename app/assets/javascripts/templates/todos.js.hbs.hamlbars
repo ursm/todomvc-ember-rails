@@ -15,7 +15,7 @@
 
   %footer#footer
     %span#todo-count
-      <strong>2</strong> todos left
+      <strong>#{hb 'remaining'}</strong> #{hb 'inflection'} left
 
     %ul#filters
       %li
