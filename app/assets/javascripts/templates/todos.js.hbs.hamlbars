@@ -8,7 +8,7 @@
       = hb 'each itemController="todo"' do
         %li{bind: {class: 'isCompleted:completed isEditing:editing'}}
           = hb 'if isEditing' do
-            %input.edit
+            = hb 'edit-todo class="edit" value=title focus-out="acceptChanges" insert-newline="acceptChanges"'
 
             = hb 'else'
 
