@@ -5,8 +5,7 @@
 
   %section#main
     = hb 'outlet'
-
-    %input#toggle-all(type='checkbox')
+    = hb 'input type="checkbox" id="toggle-all" checked=allAreDone'
 
   %footer#footer
     %span#todo-count

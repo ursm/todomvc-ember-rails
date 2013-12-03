@@ -37,3 +37,7 @@ Todos.TodosController = Ember.ArrayController.extend
 
     if remaining == 1 then 'item' else 'items'
   ).property('remaining')
+
+  allAreDone: (->
+    !!@get('length') && @everyBy('isCompleted', true)
+  ).property('@each.isCompleted')
