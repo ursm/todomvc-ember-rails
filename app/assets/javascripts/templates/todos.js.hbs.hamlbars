@@ -1,7 +1,7 @@
 %section#todoapp
   %header#header
     %h1 todos
-    %input#new-todo(type='text' placeholder='What needs to be done?')
+    = hb 'input type="text" id="new-todo" placeholder="What needs to be done?" value=newTitle action="createTodo"'
 
   %section#main
     %ul#todo-list
