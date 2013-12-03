@@ -5,9 +5,9 @@
 
   %section#main
     %ul#todo-list
-      = hb 'each' do
+      = hb 'each itemController="todo"' do
         %li{bind: {class: 'isCompleted:completed'}}
-          %input.toggle(type='checkbox')
+          = hb 'input type="checkbox" checked=isCompleted class="toggle"'
           %label= hb 'title'
           %button.destroy
 
