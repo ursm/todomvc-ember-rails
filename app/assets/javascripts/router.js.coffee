@@ -1,6 +1,10 @@
 Todos.Router.map ->
-  @resource 'todos', path: '/'
+  @resource 'todos', path: '/', ->
 
 Todos.TodosRoute = Ember.Route.extend
   model: ->
     @store.find('todo')
+
+Todos.TodosIndexRoute = Ember.Route.extend
+  model: ->
+    @modelFor('todos')

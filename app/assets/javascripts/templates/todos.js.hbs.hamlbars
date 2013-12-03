@@ -4,17 +4,7 @@
     = hb 'input type="text" id="new-todo" placeholder="What needs to be done?" value=newTitle action="createTodo"'
 
   %section#main
-    %ul#todo-list
-      = hb 'each itemController="todo"' do
-        %li{bind: {class: 'isCompleted:completed isEditing:editing'}}
-          = hb 'if isEditing' do
-            = hb 'edit-todo class="edit" value=title focus-out="acceptChanges" insert-newline="acceptChanges"'
-
-            = hb 'else'
-
-            = hb 'input type="checkbox" checked=isCompleted class="toggle"'
-            %label{_action: '"editTodo" on="doubleClick"'}= hb 'title'
-            %button.destroy{_action: 'removeTodo'}
+    = hb 'outlet'
 
     %input#toggle-all(type='checkbox')
 
