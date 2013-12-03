@@ -14,7 +14,7 @@
 
             = hb 'input type="checkbox" checked=isCompleted class="toggle"'
             %label{_action: '"editTodo" on="doubleClick"'}= hb 'title'
-            %button.destroy
+            %button.destroy{_action: 'removeTodo'}
 
     %input#toggle-all(type='checkbox')
 

@@ -11,6 +11,12 @@ Todos.TodoController = Ember.ObjectController.extend
       else
         do @get('model').save
 
+    removeTodo: ->
+      todo = @get('model')
+
+      do todo.deleteRecord
+      do todo.save
+
   isEditing: false
 
   isCompleted: ((key, value) ->
