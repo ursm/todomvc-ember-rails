@@ -14,7 +14,8 @@
 
     %ul#filters
       %li
-        %a(href='all') All
+        = hb 'link-to "todos.index" activeClass="selected"' do
+          All
       %li
         = hb 'link-to "todos.active" activeClass="selected"' do
           Active
