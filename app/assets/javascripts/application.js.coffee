@@ -8,3 +8,5 @@
 #= require_tree ./models
 
 window.Todos = Ember.Application.create()
+
+Todos.ApplicationAdapter = DS.FixtureAdapter.extend()
